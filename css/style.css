@@ -1,0 +1,325 @@
+/* 
+Table of content
+1. General
+2. Navbar
+3. Home
+4. About
+5. Skills
+6. My projects
+7. Contact me
+9. Footer
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:ital,wght@0,300;1,300&display=swap');
+
+/* General */
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+:root{
+    --primary:#00d4ff;
+    --dark:#161616;
+    --pure:#FFFFFF;
+    --text-gray:#898989;
+    --light:#F2F2F2;
+
+    --primary-font: 'Rubik', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+
+    --shadow: 0 0 0.6rem var(--primary);
+}
+
+body{
+    font-family: var(--primary-font);
+    width: 100%;
+    color: var(--light);
+    background-color: var(--dark);
+}
+
+::-webkit-scrollbar{
+    width: 0.25rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--pure);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary);
+}
+
+section{
+    padding-top: 5rem;
+}
+
+.btn{
+    display: inline-block;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 1.275rem;
+    background: var(--primary);
+    color: var(--pure);
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.325rem;
+    border:solid 0.125rem var(--primary);
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.btn:hover{
+    border-color: var(--primary);
+    background: var(--light);
+    color: var(--primary);
+    box-shadow: var(--shadow);
+    font-weight: bolder;
+}
+
+/* NAVBAR */
+
+.navbar{
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+    background: var(--dark);
+}
+
+.container-fluid{
+    width: 95%;
+}
+.navbar .navbar-brand{
+    font-family: var(--primary-font);
+    font-size: 26px;
+    text-shadow: var(--shadow);
+    color: var(--primary);
+}
+
+.nav-item{
+    margin: 0 0.575rem;
+}
+
+.nav-link{
+    color: var(--pure)!important;
+    display: inline-block;
+}
+
+.nav-link.active,
+.nav-link:hover{
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 17px;
+    color: cyan!important;
+    text-shadow: var(--shadow);
+}
+
+.navbar-toggler{
+    color: var(--light);
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    text-shadow: var(--shadow);
+    color: var(--primary)
+}
+
+/* HOME */
+
+.homebx{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.homebx .my-pic{
+    max-width: 400px;
+    max-height: 400px;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+.homebx .mypic{
+    margin-right: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 60% 30%;
+    box-shadow: var(--shadow);
+}
+.homebx .homecontent span{
+    color: var(--primary);
+    text-shadow: var(--shadow);
+}
+
+.homebx .links i{
+    color: white;
+    font-size: 40px;
+    top: 50%;
+    padding: 4px;
+    padding-right: 2%;
+}
+
+.homebx .links i:hover{
+    text-shadow: var(--shadow);
+}
+
+/* ABOUT */
+
+.aboutme{
+    text-align: left;
+}
+
+/* SKILLS */
+
+.skillsbx{
+    color: white;
+    padding-bottom: 3rem;
+}
+.skillsbx h3{
+    font-style: bold;
+    text-transform: uppercase;
+}
+.skillsbx .container-fluid{
+    width: 100%;
+    margin:  0 auto;
+    padding-top: 10%;
+}
+.skillsbx .row{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 3%;
+    row-gap: 6%;
+}
+
+.skillsbx .row i{ 
+    padding: 10%;
+    margin: 0 auto;
+    font-size: 60px;
+}
+
+.skillsbx .bar{
+    display: flex;
+    flex-direction: column;
+    padding: 11px;
+    border-radius: 5%;
+    transition: 0.2s;
+    margin: 0 auto;
+    height: auto;
+}
+
+.skillsbx .bar{
+    background-color: var(--primary);
+    box-shadow: var(--shadow);
+    font-weight: bold;
+    text-align: center;
+}
+
+.skillsbx span{
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+/* MY PROJECTS */
+
+.projectsbx .card{
+    box-shadow: var(--shadow);
+    background: var(--dark);
+}
+.projectsbx .card:hover{
+    color: var(--dark);
+    background: white;
+    font-weight: 600;
+}
+.projectsbx .view{
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 3px;
+}
+.projectsbx .card-text{
+    color: var(--text-gray) !important;
+    font-weight: 600;
+}
+.card-title{
+    font-weight: bolder;
+}
+
+.projectsbx .view .prj-btn{
+    font-size: small;
+}
+
+/* CONTACT */
+
+.contactbx{
+    color: white;
+}
+
+.contactbx h3{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.contactbx .form label{
+    padding: 5px;
+}
+
+.contactbx .form textarea:hover,
+.contactbx .form textarea:focus,
+.contactbx .form input:hover,
+.contactbx .form input:focus{
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+    border-style: solid;    
+}
+
+.contactbx .cntbtn{
+    font-size: small;
+}
+
+.mailme .text{
+    display: inline-block;
+}
+
+.callme i{
+    font-size: 18px;
+}
+.callme .calltext{
+    display: inline-block;
+}
+
+.contactbx .links{
+    display: inline-block;
+    align-items: center;
+}
+
+.contactbx .links i{
+    color: white;
+    font-size: 40px;
+    top: 50%;
+    padding: 4px;
+}
+
+.contactbx .links i:hover{
+    text-shadow: var(--shadow);
+}
+
+/* Footer */
+
+.bottomline span{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.bottomline{
+    text-align: center;
+}
